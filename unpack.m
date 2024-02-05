@@ -3,9 +3,7 @@ close all
 
 blocksize = 5;
 
-% packedImage = readmatrix("C:\Users\Schul\Entwicklung\QuartusProjekte\Abschlussprojekt\disparity_generator\disparity.csv");
-% packedImage = readmatrix("C:\Users\Schul\Entwicklung\QuartusProjekte\Abschlussprojekt\RAW2RGB\out.csv");
-packedImage = packedImage_lr;
+% packedImage = readmatrix("Image.csv");
 packedDimensions = size(packedImage);
 
 packedImageHeight = packedDimensions(1);
