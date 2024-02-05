@@ -1,10 +1,10 @@
 close all
 clear
 
-image1 = imread("C:\Users\Schul\Entwicklung\QuartusProjekte\Abschlussprojekt\Arbeitsgrundlage\ba-abschlussarbeit-82fce4c4335d9903de9860b0ec53b58b20120cf0\pyUartReceive\empfangeneBilder\Bild_links_9.png");
+image1 = imread("Image1.png");
 image1_sw = im2gray(image1) * 2;
 
-image2 = imread("C:\Users\Schul\Entwicklung\QuartusProjekte\Abschlussprojekt\Arbeitsgrundlage\ba-abschlussarbeit-82fce4c4335d9903de9860b0ec53b58b20120cf0\pyUartReceive\empfangeneBilder\Bild_rechts_9.png");
+image2 = imread("Image2.png");
 image2_sw = im2gray(image2) * 2;
 
 image1_mean = round(mean(image1_sw, "all"));
@@ -69,5 +69,5 @@ imshow(image2_sw)
 figure("Name", "Bild 1 rektifiziert")
 imshow(dst1)
 
-writematrix(dst1 * 2, "C:\Users\Schul\Entwicklung\QuartusProjekte\Abschlussprojekt\image1_sw.csv");
-writematrix(image2_sw * 2, "C:\Users\Schul\Entwicklung\QuartusProjekte\Abschlussprojekt\image2_sw.csv");
+writematrix(dst1 * 2, "Out1.csv");
+writematrix(image2_sw * 2, "Out2.csv");
