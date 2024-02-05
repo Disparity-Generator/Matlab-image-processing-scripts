@@ -1,13 +1,7 @@
 close all
 clear
 
-originalImage = imread("C:\Users\Schul\Entwicklung\QuartusProjekte\Abschlussprojekt\pyUartReceive\empfangeneBilder\Bild_7.png");
-
-% originalImage = reshape(uint16(readmatrix("C:\Users\Schul\Entwicklung\QuartusProjekte\Abschlussprojekt\bild1.csv")), 480, 640, 3);
-
-% originalImage = readmatrix("C:\Users\Schul\Entwicklung\QuartusProjekte\Abschlussprojekt\bild1.csv");
-
-
+originalImage = imread("Image.png");
 originalImageSize = size(originalImage);
 originalImageHeight = originalImageSize(1);
 originalImageWidth = originalImageSize(2);
@@ -45,12 +39,7 @@ for currentRow = 1:originalImageSize(1)
         koordinaten(currentRow, currentCol, 1) = string(currentRow) + "| " + string(currentCol) + "| " + "1";
         koordinaten(currentRow, currentCol, 2) = string(currentRow) + "| " + string(currentCol) + "| " + "2";
         koordinaten(currentRow, currentCol, 3) = string(currentRow) + "| " + string(currentCol) + "| " + "3";
-
-        % mosaicImage(currentMosaicRow, currentMosaicCol + 1) = uint16(originalImage(currentRow, currentCol, 1)) * 16.058823529411764705882352941176;
-        % mosaicImage(currentMosaicRow, currentMosaicCol) = uint16(originalImage(currentRow, currentCol, 2)) * 16.058823529411764705882352941176;
-        % mosaicImage(currentMosaicRow + 1, currentMosaicCol + 1) = uint16(originalImage(currentRow, currentCol, 2)) * 16.058823529411764705882352941176;
-        % mosaicImage(currentMosaicRow + 1, currentMosaicCol) = uint16(originalImage(currentRow, currentCol, 3)) * 16.058823529411764705882352941176;
-
+        
         mosaicImage(currentMosaicRow, currentMosaicCol + 1) = int16(double(originalImage(currentRow, currentCol, 1)) * 16.058823529411764705882352941176); % 16,058823529411764705882352941176
         mosaicImage(currentMosaicRow, currentMosaicCol) = int16(double(originalImage(currentRow, currentCol, 2)) * 16.058823529411764705882352941176);
         mosaicImage(currentMosaicRow + 1, currentMosaicCol + 1) = int16(double(originalImage(currentRow, currentCol, 2)) * 16.058823529411764705882352941176);
