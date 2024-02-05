@@ -1,8 +1,7 @@
 close all
 % clear
 
-bild = imread("C:\Users\Schul\Entwicklung\QuartusProjekte\Abschlussprojekt\Person_Counter\Zaehltest.png");
-% bild = disparitaetsBild_komprimiert;
+bild = imread("Image.png");
 bild = im2gray(bild);
 
 bild = bild == 255;
@@ -10,7 +9,7 @@ bild = uint8(bild);
 
 bild2 = bild;
 
-writematrix(bild, "C:\Users\Schul\Entwicklung\QuartusProjekte\Abschlussprojekt\Element_Counter\zaehltest.csv");
+writematrix(bild, "Out.csv");
 
 % bild = floor(bild .* (255 / max(bild, [], "all")));
 
