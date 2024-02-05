@@ -2,10 +2,10 @@ close all
 clear
 
 % Load images and convert them to grayscale
-image1 = imread("C:\Users\Schul\Entwicklung\QuartusProjekte\Abschlussprojekt\Arbeitsgrundlage\ba-abschlussarbeit-82fce4c4335d9903de9860b0ec53b58b20120cf0\pyUartReceive\empfangeneBilder\Bild_links_1.png");
+image1 = imread("Image1.png");
 image1_sw = im2gray(image1);
 
-image2 = imread("C:\Users\Schul\Entwicklung\QuartusProjekte\Abschlussprojekt\Arbeitsgrundlage\ba-abschlussarbeit-82fce4c4335d9903de9860b0ec53b58b20120cf0\pyUartReceive\empfangeneBilder\Bild_rechts_1.png");
+image2 = imread("Image2.png");
 image2_sw = im2gray(image2);
 
 [imageHeight, imageWidth] = size(image1_sw);
